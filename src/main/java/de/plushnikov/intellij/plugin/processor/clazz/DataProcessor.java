@@ -79,6 +79,7 @@ public class DataProcessor extends AbstractClassProcessor {
     return result;
   }
 
+  @Override
   protected void generatePsiElements(@NotNull PsiClass psiClass, @NotNull PsiAnnotation psiAnnotation, @NotNull List<? super PsiElement> target) {
     if (PsiAnnotationSearchUtil.isNotAnnotatedWith(psiClass, Getter.class)) {
       target.addAll(getterProcessor.createFieldGetters(psiClass, PsiModifier.PUBLIC));

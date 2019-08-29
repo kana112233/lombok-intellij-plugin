@@ -27,6 +27,7 @@ public class FieldNameConstantsProcessor extends AbstractFieldNameConstantsProce
     super(configDiscovery, PsiClass.class, FieldNameConstants.class);
   }
 
+  @Override
   protected void generatePsiElements(@NotNull PsiClass psiClass, @NotNull PsiAnnotation psiAnnotation, @NotNull List<? super PsiElement> target) {
     final Collection<PsiField> psiFields = filterFields(psiClass, psiAnnotation);
     if (!psiFields.isEmpty()) {

@@ -58,6 +58,7 @@ public class SetterProcessor extends AbstractClassProcessor {
     return null != methodVisibility;
   }
 
+  @Override
   protected void generatePsiElements(@NotNull PsiClass psiClass, @NotNull PsiAnnotation psiAnnotation, @NotNull List<? super PsiElement> target) {
     final String methodVisibility = LombokProcessorUtil.getMethodModifier(psiAnnotation);
     if (methodVisibility != null) {
@@ -71,7 +72,7 @@ public class SetterProcessor extends AbstractClassProcessor {
     final Collection<PsiField> setterFields = filterSetterFields(psiClass);
 
     for (PsiField setterField : setterFields) {
-      result.add(fieldProcessor.createSetterMethod(setterField, psiClass, methodModifier));
+//      result.add(fieldProcessor.createSetterMethod(setterField, psiClass, methodModifier));
     }
     return result;
   }

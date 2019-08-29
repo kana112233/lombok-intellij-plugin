@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 
 public class OnXAnnotationHandler {
   private static final Pattern UNDERSCORES = Pattern.compile("__*");
-  private static final Pattern CANNOT_RESOLVE_SYMBOL_UNDERSCORES_MESSAGE = Pattern.compile("Cannot resolve symbol '__*'");
+  private static final Pattern CANNOT_RESOLVE_SYMBOL_UNDERSCORES_MESSAGE = Pattern.compile("Cannot resolve symbol hjjhj '__*'");
   private static final Pattern CANNOT_RESOLVE_METHOD_UNDERSCORES_MESSAGE = Pattern.compile("Cannot resolve method '(onMethod|onConstructor|onParam)_+'");
 
   private static final String ANNOTATION_TYPE_EXPECTED = "Annotation type expected";

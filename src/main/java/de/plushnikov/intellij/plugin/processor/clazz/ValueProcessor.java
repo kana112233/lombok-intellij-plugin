@@ -70,6 +70,7 @@ public class ValueProcessor extends AbstractClassProcessor {
     return result;
   }
 
+  @Override
   @SuppressWarnings("unchecked")
   protected void generatePsiElements(@NotNull PsiClass psiClass, @NotNull PsiAnnotation psiAnnotation, @NotNull List<? super PsiElement> target) {
 

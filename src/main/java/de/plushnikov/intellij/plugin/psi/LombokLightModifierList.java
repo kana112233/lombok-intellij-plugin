@@ -43,6 +43,7 @@ public class LombokLightModifierList extends LightModifierList {
     myImplicitModifiers.add(implicitModifier);
   }
 
+  @Override
   public void setModifierProperty(@PsiModifier.ModifierConstant @NotNull @NonNls String name, boolean value) throws IncorrectOperationException {
     if (value) {
       addModifier(name);
@@ -74,6 +75,7 @@ public class LombokLightModifierList extends LightModifierList {
     return result;
   }
 
+  @Override
   public void checkSetModifierProperty(@PsiModifier.ModifierConstant @NotNull @NonNls String name, boolean value) throws IncorrectOperationException {
     throw new IncorrectOperationException();
   }
@@ -109,6 +111,7 @@ public class LombokLightModifierList extends LightModifierList {
     return r == null ? TextRange.EMPTY_RANGE : r;
   }
 
+  @Override
   public String toString() {
     return "LombokLightModifierList";
   }

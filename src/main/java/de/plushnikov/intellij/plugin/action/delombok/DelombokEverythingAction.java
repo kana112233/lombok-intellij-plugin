@@ -39,6 +39,7 @@ import static de.plushnikov.intellij.plugin.util.ExtensionsUtil.findExtension;
 
 public class DelombokEverythingAction extends AbstractDelombokAction {
 
+  @Override
   protected DelombokHandler createHandler() {
     return new DelombokHandler(true,
       findExtension(RequiredArgsConstructorProcessor.class),

@@ -127,6 +127,7 @@ public class EqualsAndHashCodeProcessor extends AbstractClassProcessor {
     return PsiMethodUtil.hasMethodByName(classMethodsIntern, EQUALS_METHOD_NAME, HASH_CODE_METHOD_NAME);
   }
 
+  @Override
   protected void generatePsiElements(@NotNull PsiClass psiClass, @NotNull PsiAnnotation psiAnnotation, @NotNull List<? super PsiElement> target) {
     target.addAll(createEqualAndHashCode(psiClass, psiAnnotation));
   }

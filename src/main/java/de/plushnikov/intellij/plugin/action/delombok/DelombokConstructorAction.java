@@ -9,6 +9,7 @@ import static de.plushnikov.intellij.plugin.util.ExtensionsUtil.findExtension;
 
 public class DelombokConstructorAction extends AbstractDelombokAction {
 
+  @Override
   @NotNull
   protected DelombokHandler createHandler() {
     return new DelombokHandler(

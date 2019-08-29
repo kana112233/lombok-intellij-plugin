@@ -5,6 +5,7 @@ import de.plushnikov.intellij.plugin.util.ExtensionsUtil;
 import org.jetbrains.annotations.NotNull;
 
 public class DelombokValueAction extends AbstractDelombokAction {
+  @Override
   @NotNull
   protected DelombokHandler createHandler() {
     return new DelombokHandler(ExtensionsUtil.findExtension(ValueProcessor.class));
